@@ -12,13 +12,13 @@ int main(){
   NeuralNetwork nn(784, 128, 10);
   nn.training(trainImages, trainLabels, 64, 10, 0.01);    // batch, epochs, learning rate
   nn.evaluate(testImages, testLabels);
-  MnistLoader p1("../mnist/misc/img2g.idx3-ubyte");
-  MnistLoader p2("../mnist/misc/img3g.idx3-ubyte");
-  MnistLoader p3("../mnist/misc/img5g.idx3-ubyte");
-  MnistLoader p4("../mnist/misc/img6g.idx3-ubyte");
-  MnistLoader p5("../mnist/misc/img7g.idx3-ubyte");
-  MnistLoader p6("../mnist/misc/img8g.idx3-ubyte");
-  MnistLoader p7("../mnist/misc/img9g.idx3-ubyte");
+  MnistLoader p1("mnist/misc/img2g.idx3-ubyte");
+  MnistLoader p2("mnist/misc/img3g.idx3-ubyte");
+  MnistLoader p3("mnist/misc/img5g.idx3-ubyte");
+  MnistLoader p4("mnist/misc/img6g.idx3-ubyte");
+  MnistLoader p5("mnist/misc/img7g.idx3-ubyte");
+  MnistLoader p6("mnist/misc/img8g.idx3-ubyte");
+  MnistLoader p7("mnist/misc/img9g.idx3-ubyte");
   Matrix img2 = p1.getImages();   // gambar 2
   nn.predict(img2);
   Matrix img3 = p2.getImages();  // gambar 3
