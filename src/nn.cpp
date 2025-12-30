@@ -83,7 +83,7 @@ Matrix getSample(const Matrix &sources, size_t idx){
   return x;
 }
 
-Layer::Layer(size_t in, size_t out, activationFunction act = activationFunction::ReLU) : inFeatures(in), outFeatures(out), W(out, in), b(out, 1), z(out, 1), vW(out, in), vb(out, 1), a(out, 1){   // default is kaiming
+Layer::Layer(size_t in, size_t out, activationFunction act = activationFunction::ReLU) : inFeatures(in), outFeatures(out), W(out, in), b(out, 1), z(out, 1), a(out, 1), vW(out, in), vb(out, 1){   // default is kaiming
     initLayer(act);
   }
   
