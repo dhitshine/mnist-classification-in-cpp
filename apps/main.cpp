@@ -9,7 +9,7 @@ int main(){
   Matrix testImages = testLoad.getImages();
   Matrix testLabels = testLoad.getOneHotLabels();
 
-  NeuralNetwork nn(784, 128, 10);
+  NeuralNetwork nn(784, 64, 10);
   nn.training(trainImages, trainLabels, 64, 10, 0.01);    // batch, epochs, learning rate
   nn.evaluate(testImages, testLabels);
   MnistLoader p1("mnist/misc/img2g.idx3-ubyte");
